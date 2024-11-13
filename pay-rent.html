@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Rent - Great Rift Valley</title>
+    <link rel="stylesheet" href="pay-rent.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Pay Rent - Great Rift Valley</h1>
+        </header>
+        
+        <section class="payment-info">
+            <p>Thank you for choosing to pay your rent for the Great Rift Valley property.</p>
+            <p>To complete your payment, please follow the instructions below:</p>
+            
+            <ul>
+                <li><strong>Step 1:</strong> Open your M-PESA app (or any other payment platform that supports Paybill).</li>
+                <li><strong>Step 2:</strong> Select 'Lipa na M-PESA' and then choose 'Paybill'.</li>
+                <li><strong>Step 3:</strong> Enter the Paybill number: <strong>247247</strong></li>
+                <li><strong>Step 4:</strong> Enter the Account Number: <strong>748693</strong></li>
+                <li><strong>Step 5:</strong> Enter the amount you want to pay (in KES).</li>
+                <li><strong>Step 6:</strong> Confirm and send the payment.</li>
+            </ul>
+            
+            <p>Once you have completed the payment, please fill out the form below to confirm your payment.</p>
+        </section>
+
+        <section class="payment-form">
+            <form id="payment-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="amount">Amount Paid (KES):</label>
+                <input type="number" id="amount" name="amount" required placeholder="Enter the amount you paid">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+                <button type="submit" id="pay-button">Submit Payment</button>
+            </form>
+        </section>
+
+        <div id="payment-status" class="payment-status"></div>
+    </div>
+
+    <script src="pay-rent.js"></script>
+</body>
+</html>

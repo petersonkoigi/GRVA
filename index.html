@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great rift valley appartments</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="script" href="new.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav id="navbar">
+        <ul>
+            <li><a href="new.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Photo gallery</a>
+                <div class="dropdown-content">
+                    <a href="photos.html">View photos here</a>
+                    <!-- Add more links here if needed -->
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="pay-rent.html">Pay Rent</a></li> <!-- Added Pay Rent link -->
+            <li class="dropdown">
+                
+                <div class="dropdown-content">
+                  
+                    <li></li>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- Homepage Hero Section -->
+    <section id="home" class="hero">
+        <h1><marquee direction="left">Welcome to Great Rift Valley Apartments Nakuru</marquee></h1>
+        <p>Experience luxury and comfort in a serene environment.</p>
+        <a href="#booking" class="button" id="bookBtn">Book With Us</a>
+    
+        <!-- Booking Form Modal -->
+        <div id="bookingForm" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeBtn">&times;</span>
+                <h2>Book Your Stay</h2>
+                <form id="bookingFormContent">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+    
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" name="time" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <div id="thankYouMessage" class="thank-you-message" style="display:none;">
+                    <h3>Thank you for booking with us. We hope to see you soon!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Welcome Message -->
+    <section class="welcome-message">
+        <h2>Welcome</h2>
+        <div class="image-container">
+        <img src="images/gate.jpg">
+        <img src="images/simba.jpg">
+        <img src="images/arial.jpg">
+        <img src="images/ndovu.jpg">
+        </div>
+        <p>Discover the comfort and style that awaits you at Great Rift Valley Apartments!</p>
+    </section>
+    <!--quick info-->
+    <section class="quick-info-section">
+        <script type="text/javascript">
+            const cards = document.querySelectorAll('.info-card');
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+    
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                observer.observe(card);
+            });
+        </script>
+    
+        <h2 class="section-title">Great Rift Valley Apartments</h2>
+        
+        <div class="info-grid">
+            <div class="info-card">
+               <a href="apartments.html"><h3>🏢 Our Apartments</h3></a>
+                <ul>
+                    <li>Modern 2 and 3 Bedroom Apartments</li>
+                    <li>Fully Equipped Kitchens</li>
+                    <li>Spacious Living Rooms</li>
+                    <li>Private Balconies with Scenic Views</li>
+                    <li>24/7 Security and Surveillance</li>
+                </ul>
+            </div>
+    
+            <div class="info-card">
+                <h3>🌍 Location</h3>
+                <p>Conveniently located in the heart of Great Rift Valley, offering easy access to:</p>
+                <ul>
+                    <li>Close Proximity to Shopping Centers</li>
+                    <li>Short Drive to Major Highways</li>
+                    <li>Nearby Schools and Hospitals</li>
+                    <li>Stunning Views of the Rift Valley and Lake Nakuru</li>
+                </ul>
+            </div>
+    
+            <div class="info-card">
+                <h3>🛠️ Amenities</h3>
+                <ul>
+                    <li>Swimming Pool</li>
+                    <li>Fully Equipped Gym</li>
+                    <li>Children’s Play Area</li>
+                    <li>Private Parking</li>
+                    <li>On-Site Management Team</li>
+                </ul>
+            </div>
+    
+            <div class="info-card">
+                <h3>📅 Availability & Pricing</h3>
+                <ul>
+                    <li>Flexible Leasing Options</li>
+                    <li>Competitive Rental Rates</li>
+                    <li>Short-Term and Long-Term Rentals</li>
+                    <li>Special Discounts for Early Movers</li>
+                    <li>Contact Us for a Free Tour</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        <!-- slider featured programs-->
+         <section class="programs-section">
+        <h2 class="section-title">Our Recreation and fitness zones</h2>
+        
+        <div class="slider-container">
+            <div class="slider" id="programSlider">
+                <div class="slide">
+                    <img src="images/arial.jpg" alt="Art Classes">
+                    <div class="slide-content">
+                        <h3>Football pitch</h3>
+                        <p>well maintained pitch</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/park.jpg" alt="Outdoor Sports">
+                    <div class="slide-content">
+                        <h3>Our bootanic garden</h3>
+                        <p>well organized bootanic adventures and resting seats.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/pool b.jpg" alt="Reading Corner">
+                    <div class="slide-content">
+                        <h3>Our swimming pool</h3>
+                        <p>An enjoyable pool for adults and kids for literary exploration,swimming sessions, and developing a love for swimming.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/playground.jpg" alt="Interactive Workshops">
+                    <div class="slide-content">
+                        <h3>Childrens` play area</h3>
+                        <p>Well maintained for childrens` fun moments</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gym bb.jpg" alt="Music & Movement">
+                    <div class="slide-content">
+                        <h3>Fitness center</h3>
+                        <p> Body build in a fun and energetic environment.</p>
+                    </div>
+                </div>
+
+               <!-- <div class="slide">
+                    <img src="path-to-your-stem-image.jpg" alt="STEM Activities">
+                    <div class="slide-content">
+                        <h3>STEM Discovery</h3>
+                        <p>Engaging activities in science, technology, engineering, and mathematics for young minds.</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="slider-buttons">
+                <button class="slider-btn prev-btn">←</button>
+                <button class="slider-btn next-btn">→</button>
+            </div>
+        </div>
+
+        <div class="dots-container" id="sliderDots"></div>
+    </section>
+        
+       
+    </section>
+
+    <!-- About Us Section -->
+    
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>Email us at   :  greatriftapartments@gmail.com</p> <br>
+        <p>Contact us at :  0732575297 or 0724680594</p> <br>
+        <p>&copy; 2024 Great Rift Valley Apartments Nakuru. All rights reserved.</p>
+        <form class="newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+          <!-- Google Map Section -->
+    <div class="google-map">
+        <h4>Our Location </h4>
+    
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1338452.012482003!2d34.0335!3d-0.0236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182780d08350900f%3A0x403b0eb0a1976dd9!2sKenya!5e0!3m2!1sen!2ske!4v1731154830799!5m2!1sen!2ske
+        "width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+    
+    </footer>
+    <script type="" src="new.js"></script>
+
+
+</body>
+</html>
